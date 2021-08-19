@@ -1,3 +1,3 @@
 # G-Manipulate
 
-G-Earth utility extensions for blocking & replacing packets
+G-Earth utility extension for blocking & replacing packets
