@@ -27,7 +27,7 @@ import java.util.List;
 @ExtensionInfo(
         Title = "G-Manipulate",
         Description = "Block &/ replace packets",
-        Version = "0.2",
+        Version = "0.2.1",
         Author = "sirjonasxx"
 )
 public class BlockAndReplacePackets extends ExtensionForm {

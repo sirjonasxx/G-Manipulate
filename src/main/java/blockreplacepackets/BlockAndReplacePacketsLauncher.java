@@ -1,28 +1,19 @@
 package blockreplacepackets;
 
-import gearth.Main;
-import gearth.extensions.ExtensionForm;
-import gearth.extensions.ExtensionFormCreator;
-import gearth.ui.GEarthController;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.stage.Stage;
+import gearth.extensions.ThemedExtensionFormCreator;
 
-public class BlockAndReplacePacketsLauncher extends ExtensionFormCreator {
+import java.net.URL;
 
-    public ExtensionForm createForm(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(BlockAndReplacePackets.class.getResource("blockreplace.fxml"));
-        Parent root = loader.load();
+public class BlockAndReplacePacketsLauncher extends ThemedExtensionFormCreator {
 
-        primaryStage.setTitle("Packet blocker &/ replacer");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.setResizable(false);
-        primaryStage.getScene().getStylesheets().add(GEarthController.class.getResource("/gearth/ui/bootstrap3.css").toExternalForm());
-        primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("G-EarthLogoSmaller.png")));
+    @Override
+    protected String getTitle() {
+        return "Packet blocker &/ replacer";
+    }
 
-        return loader.getController();
+    @Override
+    protected URL getFormResource() {
+        return BlockAndReplacePackets.class.getResource("blockreplace.fxml");
     }
 
     public static void main(String[] args) {
